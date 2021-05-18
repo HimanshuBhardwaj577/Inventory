@@ -52,7 +52,7 @@ namespace Repair_Center
                         string Namee = sdr["Name"].ToString();
                         string otpp = sdr["Otp"].ToString();
 
-                        MailMessage mm = new MailMessage("himanshubhardwaj0211@gmail.com", TextBox1.Text);
+                        MailMessage mm = new MailMessage("Your Gmail Id", TextBox1.Text);
                         mm.Subject = "Your Otp";
                         mm.Body = string.Format("Hello : <h1>{0}</h1> your otp is {1} ", Namee, otpp);
                         mm.IsBodyHtml = true;
@@ -60,8 +60,8 @@ namespace Repair_Center
                         smtp.Host = "smtp.gmail.com";
                         smtp.EnableSsl = true;
                         NetworkCredential nc = new NetworkCredential();
-                        nc.UserName = "himanshubhardwaj0211@gmail.com";
-                        nc.Password = "Bbkivines123";
+                        nc.UserName = "Your Gmail Id";
+                        nc.Password = "Your Gmail Id Password";
                         smtp.UseDefaultCredentials = true;
                         smtp.Credentials = nc;
                         smtp.Port = 587;
