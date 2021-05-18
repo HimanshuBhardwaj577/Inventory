@@ -165,7 +165,7 @@ namespace Repair_Center
                                    "</ body ></ html >";
                 TextBox4.Text = onee;
 
-                string from = "Himanshu159357@outlook.com";
+                string from = "Your-Outlook-id";
                 using (MailMessage mail = new MailMessage(from, TextBox1.Text))
                 {
                     {
@@ -183,7 +183,7 @@ namespace Repair_Center
                         client.Port = 587;
                         client.DeliveryMethod = SmtpDeliveryMethod.Network;
                         client.UseDefaultCredentials = false;
-                        System.Net.NetworkCredential credential = new System.Net.NetworkCredential(from, "Bbkivines@123");
+                        System.Net.NetworkCredential credential = new System.Net.NetworkCredential(from, "Outlook-id-password");
                         client.EnableSsl = true;
                         client.Credentials = credential;
                         client.Send(mail);
